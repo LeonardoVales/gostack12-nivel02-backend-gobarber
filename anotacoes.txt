@@ -1,0 +1,20 @@
+Iniciando projeto node:
+
+1. yarn init -y
+2. yarn add express
+3. yarn add typescript -D
+4. yarn tsc --init //gera o arquivo tsconfig.json
+5. executa yarn tsc que ele gera o arquivo em javascript normal (converte o código em javascript)
+6. muda o tsconfig.json:
+     "outDir": "./dist",
+     "rootDir": "./src",
+7. instala o yarn add @type/express -D que instala o express com typescript
+
+
+8. yarn add ts-node-dev =
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts"
+  },
+
+  O repositório é uma persistência entre
