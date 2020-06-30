@@ -4,11 +4,6 @@ import CreateUserService from '../services/CreateUserService';
 
 const usersRouter = Router();
 
-/**
- * Repositories
- * Services
- */
-
 usersRouter.post('/', async (request, response) => {
 
     try {
