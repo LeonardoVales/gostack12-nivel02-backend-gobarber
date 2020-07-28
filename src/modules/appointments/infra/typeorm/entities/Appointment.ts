@@ -7,7 +7,7 @@ import { Entity,
          JoinColumn
     } from 'typeorm';
 
-import User from './User';
+import User from '@modules/users/infra/typeorm/entities/User';
 
 /*
 * Um para um (OneToOne) = Um usuário tem um agendamento
