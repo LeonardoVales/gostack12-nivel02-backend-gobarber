@@ -22,7 +22,7 @@ class ListProviderMonthAvailabilityService {
         private appointmentsRepository: IAppointmentsRepository,
     ) {}
 
-    public async execute({provider_id, year, month}: IRequest): Promise<IResponse> {
+    public async execute({provider_id, month, year}: IRequest): Promise<IResponse> {
 
         const appointments = await this.appointmentsRepository.findAllInMonthFromProvider({
             provider_id,
@@ -36,8 +36,6 @@ class ListProviderMonthAvailabilityService {
             { length: numberOfDaysInMonth },
             (_, index) => index + 1,
         );
-
-        console.log(eachDayArray);
 
         const availability = eachDayArray.map(day => {
             const appointmentsInDay = appointments.filter(appointment => {
