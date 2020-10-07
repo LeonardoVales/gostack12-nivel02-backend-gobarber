@@ -11,6 +11,6 @@ export default class UserAvatarController {
             avatarFileName: request.file.filename,
         });
 
-        return response.json(classToClass(classToClass));
+        return response.json(classToClass(user));
     }
 }
